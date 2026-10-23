@@ -1877,26 +1877,136 @@ html&gt;body{padding:0}&lt;/style&gt;
   {id:&#x27;E27&#x27;,name:&#x27;为适配受访者打磨问句、顾及对方处境&#x27;,color:&#x27;#b88765&#x27;,wash:&#x27;#f3e7de&#x27;}
  ];
  const questions=[
- {id:&#x27;q1&#x27;,name:&#x27;选择采访对象&#x27;,question:&#x27;你的采访对象是？你是如何决定采访对象的选择的？&#x27;,parts:[
-  {text:&#x27;我最终选择采访学校安全处主任。&#x27;},
-  {id:&#x27;s1&#x27;,text:&#x27;一开始我在三个对象里纠结了很久&#x27;,codes:[&#x27;E01&#x27;]},
-  {text:&#x27;。社区网格员的工作内容太杂，我担心自己整理不清楚；地理老师虽然贴近学科，但可提问的生活化问题比较有限。&#x27;},
-  {id:&#x27;s2&#x27;,text:&#x27;安全处主任的工作和我们学生校园生活高度相关，&#x27;,codes:[&#x27;E03&#x27;]},
-  {text:&#x27;比如校园安全、课间隐患、学生行为管理这些，我自己平时就有很多疑惑。&#x27;},
-  {id:&#x27;s3&#x27;,text:&#x27;我担心主任回答会比较官方&#x27;,codes:[&#x27;E02&#x27;]},
-  {text:&#x27;，但&#x27;},
-  {id:&#x27;s4&#x27;,text:&#x27;综合考虑话题熟悉度、可提问空间和采访价值，最后还是确定了安全处主任&#x27;,codes:[&#x27;E03&#x27;]},{text:&#x27;。&#x27;}]},
- {id:&#x27;q2&#x27;,name:&#x27;完善采访提纲&#x27;,question:&#x27;你在最开始的时候是如何草拟采访提纲中的问题的？你又如何逐步完善这些问题以确定最终版本的提纲的？&#x27;,parts:[
-  {id:&#x27;s5&#x27;,text:&#x27;最开始我完全没有思路，直接让 AI 根据 “采访学校安全处主任” 生成一批问题&#x27;,codes:[&#x27;E04&#x27;,&#x27;E06&#x27;]},
-  {text:&#x27;。拿到 AI 输出之后，&#x27;},
-  {id:&#x27;s6&#x27;,text:&#x27;我发现不少问题太宏大笼统，&#x27;,codes:[&#x27;E05&#x27;]},
-  {id:&#x27;s7&#x27;,text:&#x27;不适合向主任提问&#x27;,codes:[&#x27;E27&#x27;]},{text:&#x27;。&#x27;},
-  {id:&#x27;s8&#x27;,text:&#x27;我删掉一部分太空的问题，又&#x27;,codes:[&#x27;E07&#x27;]},
-  {id:&#x27;s9&#x27;,text:&#x27;改写&#x27;,codes:[&#x27;E27&#x27;]},
-  {id:&#x27;s10&#x27;,text:&#x27;了几个问句&#x27;,codes:[&#x27;E07&#x27;]},{text:&#x27;，&#x27;},
-  {id:&#x27;s11&#x27;,text:&#x27;让问题更贴合校园真实场景&#x27;,codes:[&#x27;E27&#x27;]},{text:&#x27;。&#x27;},
-  {id:&#x27;s12&#x27;,text:&#x27;我还准备了几个追问&#x27;,codes:[&#x27;E08&#x27;]},{text:&#x27;，防止采访时对话断掉。&#x27;}]}
- ];
+  {
+    &quot;id&quot;: &quot;q1&quot;,
+    &quot;name&quot;: &quot;Selecting an interviewee&quot;,
+    &quot;question&quot;: &quot;Who did you interview? How did you decide whom to interview?&quot;,
+    &quot;parts&quot;: [
+      {
+        &quot;text&quot;: &quot;I eventually chose to interview the school safety director. &quot;
+      },
+      {
+        &quot;id&quot;: &quot;s1&quot;,
+        &quot;text&quot;: &quot;At first, I spent a long time deciding between three potential interviewees&quot;,
+        &quot;codes&quot;: [
+          &quot;E01&quot;
+        ]
+      },
+      {
+        &quot;text&quot;: &quot;. The community grid worker had such a wide range of responsibilities that I worried I would struggle to organize the information clearly. Although the geography teacher was relevant to the subject, there were relatively few everyday-life questions I could ask. &quot;
+      },
+      {
+        &quot;id&quot;: &quot;s2&quot;,
+        &quot;text&quot;: &quot;The safety director’s work was closely connected to our daily lives as students on campus, &quot;,
+        &quot;codes&quot;: [
+          &quot;E03&quot;
+        ]
+      },
+      {
+        &quot;text&quot;: &quot;including campus safety, hazards during breaks, and student behavior management—areas I often had questions about. &quot;
+      },
+      {
+        &quot;id&quot;: &quot;s3&quot;,
+        &quot;text&quot;: &quot;I worried that the director’s answers might sound too official&quot;,
+        &quot;codes&quot;: [
+          &quot;E02&quot;
+        ]
+      },
+      {
+        &quot;text&quot;: &quot;, but &quot;
+      },
+      {
+        &quot;id&quot;: &quot;s4&quot;,
+        &quot;text&quot;: &quot;after weighing my familiarity with the topic, the scope for questions, and the value of the interview, I ultimately chose the school safety director&quot;,
+        &quot;codes&quot;: [
+          &quot;E03&quot;
+        ]
+      },
+      {
+        &quot;text&quot;: &quot;.&quot;
+      }
+    ]
+  },
+  {
+    &quot;id&quot;: &quot;q2&quot;,
+    &quot;name&quot;: &quot;Refining the interview guide&quot;,
+    &quot;question&quot;: &quot;How did you initially draft the questions in your interview guide? How did you gradually refine them to produce the final version?&quot;,
+    &quot;parts&quot;: [
+      {
+        &quot;id&quot;: &quot;s5&quot;,
+        &quot;text&quot;: &quot;At first, I had no idea where to start, so I simply asked AI to generate a set of questions for an interview with the school safety director&quot;,
+        &quot;codes&quot;: [
+          &quot;E04&quot;,
+          &quot;E06&quot;
+        ]
+      },
+      {
+        &quot;text&quot;: &quot;. After reviewing the AI-generated questions, &quot;
+      },
+      {
+        &quot;id&quot;: &quot;s6&quot;,
+        &quot;text&quot;: &quot;I found that many were too broad and general, &quot;,
+        &quot;codes&quot;: [
+          &quot;E05&quot;
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;s7&quot;,
+        &quot;text&quot;: &quot;making them unsuitable questions to ask the director&quot;,
+        &quot;codes&quot;: [
+          &quot;E27&quot;
+        ]
+      },
+      {
+        &quot;text&quot;: &quot;. &quot;
+      },
+      {
+        &quot;id&quot;: &quot;s8&quot;,
+        &quot;text&quot;: &quot;I removed some of the overly vague questions and &quot;,
+        &quot;codes&quot;: [
+          &quot;E07&quot;
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;s9&quot;,
+        &quot;text&quot;: &quot;reworded&quot;,
+        &quot;codes&quot;: [
+          &quot;E27&quot;
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;s10&quot;,
+        &quot;text&quot;: &quot; a few questions&quot;,
+        &quot;codes&quot;: [
+          &quot;E07&quot;
+        ]
+      },
+      {
+        &quot;text&quot;: &quot; &quot;
+      },
+      {
+        &quot;id&quot;: &quot;s11&quot;,
+        &quot;text&quot;: &quot;to make them more relevant to real situations on campus&quot;,
+        &quot;codes&quot;: [
+          &quot;E27&quot;
+        ]
+      },
+      {
+        &quot;text&quot;: &quot;. &quot;
+      },
+      {
+        &quot;id&quot;: &quot;s12&quot;,
+        &quot;text&quot;: &quot;I also prepared several follow-up questions&quot;,
+        &quot;codes&quot;: [
+          &quot;E08&quot;
+        ]
+      },
+      {
+        &quot;text&quot;: &quot; to keep the conversation going during the interview.&quot;
+      }
+    ]
+  }
+];
  const byId=Object.fromEntries(codes.map(c=&gt;[c.id,c])),fragments=questions.flatMap(q=&gt;q.parts.filter(p=&gt;p.codes).map(p=&gt;({...p,question:q.id})));
  const input=one(&#x27;[data-tv-search]&#x27;),chipBox=one(&#x27;[data-tv-chips]&#x27;),transcripts=one(&#x27;[data-tv-transcripts]&#x27;),detail=one(&#x27;[data-tv-detail]&#x27;),summary=one(&#x27;[data-tv-summary]&#x27;);
  const safe=s=&gt;String(s).replace(/[&amp;&lt;&gt;&quot;&#x27;]/g,c=&gt;({&#x27;&amp;&#x27;:&#x27;&amp;amp;&#x27;,&#x27;&lt;&#x27;:&#x27;&amp;lt;&#x27;,&#x27;&gt;&#x27;:&#x27;&amp;gt;&#x27;,&#x27;&quot;&#x27;:&#x27;&amp;quot;&#x27;,&quot;&#x27;&quot;:&#x27;&amp;#39;&#x27;}[c]));
@@ -1913,8 +2023,8 @@ html&gt;body{padding:0}&lt;/style&gt;
    const badges=state.mode===&#x27;inline&#x27;?p.codes.map(id=&gt;`&lt;span class=&quot;tv-badge&quot; aria-hidden=&quot;true&quot; style=&quot;${style(byId[id])}&quot;&gt;${id}&lt;/span&gt;`).join(&#x27;&#x27;):&#x27;&#x27;;
    const strips=state.mode===&#x27;margin&#x27;?p.codes.map(id=&gt;`&lt;span class=&quot;tv-strip&quot; aria-hidden=&quot;true&quot; style=&quot;${style(byId[id])}&quot;&gt;&lt;/span&gt;`).join(&#x27;&#x27;)+`&lt;span class=&quot;tv-strip-label&quot; aria-hidden=&quot;true&quot;&gt;${p.codes.join(&#x27;/&#x27;)}&lt;/span&gt;`:&#x27;&#x27;;
    return `&lt;button type=&quot;button&quot; class=&quot;tv-evidence cursor-interaction${dim?&#x27; tv-dim&#x27;:&#x27;&#x27;}${selected?&#x27; tv-selected&#x27;:&#x27;&#x27;}&quot; data-tv-fragment=&quot;${p.id}&quot; style=&quot;${style(c)}&quot; aria-pressed=&quot;${selected}&quot; aria-label=&quot;${safe(p.text)}；对应 ${p.codes.join(&#x27;、&#x27;)}&quot;&gt;${strips}&lt;span class=&quot;tv-evidence-text&quot;&gt;${text}&lt;/span&gt;${badges}&lt;/button&gt;`;
-  }).join(&#x27;&#x27;);return `&lt;article class=&quot;tv-card&quot; aria-labelledby=&quot;transcript-viewer-4-${q.id}&quot;&gt;&lt;div class=&quot;tv-card-top&quot;&gt;&lt;span class=&quot;tv-question-number&quot;&gt;问答 ${index+1}&lt;/span&gt;&lt;span&gt;${safe(q.name)}&lt;/span&gt;&lt;/div&gt;&lt;h3 class=&quot;tv-question&quot; id=&quot;transcript-viewer-4-${q.id}&quot;&gt;问题：${marked(q.question,0,questionHits)}&lt;/h3&gt;&lt;div class=&quot;tv-answer-label&quot;&gt;受访者回答&lt;/div&gt;&lt;p class=&quot;tv-answer&quot;&gt;${body}&lt;/p&gt;&lt;/article&gt;`;}).join(&#x27;&#x27;);}
- function renderDetail(){const f=fragments.find(p=&gt;p.id===state.selected);detail.hidden=!f;if(!f){detail.innerHTML=&#x27;&#x27;;transcripts.after(detail);return;}const card=one(`#transcript-viewer-4-${f.question}`)?.closest(&#x27;.tv-card&#x27;);if(card)card.after(detail);detail.innerHTML=`&lt;div class=&quot;tv-selection-head&quot;&gt;&lt;span&gt;所选原话 · ${f.codes.length} 个关联编码&lt;/span&gt;&lt;button type=&quot;button&quot; class=&quot;tv-close cursor-interaction&quot; data-tv-close aria-label=&quot;关闭编码明细&quot;&gt;关闭 ×&lt;/button&gt;&lt;/div&gt;&lt;p&gt;“${safe(f.text)}”&lt;/p&gt;&lt;ul&gt;${f.codes.map(id=&gt;{const c=byId[id];return `&lt;li style=&quot;${style(c)}&quot;&gt;&lt;span class=&quot;tv-dot&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;span&gt;${id} · ${safe(c.name)}&lt;/span&gt;&lt;/li&gt;`;}).join(&#x27;&#x27;)}&lt;/ul&gt;${f.id===&#x27;s5&#x27;?&#x27;&lt;p&gt;同一处证据同时对应 E04 和 E06，原文只呈现一次。&lt;/p&gt;&#x27;:[&#x27;s8&#x27;,&#x27;s9&#x27;,&#x27;s10&#x27;].includes(f.id)?&#x27;&lt;p&gt;完整上下文：我删掉一部分太空的问题，又改写了几个问句。&lt;/p&gt;&#x27;:&#x27;&#x27;}`;}
+  }).join(&#x27;&#x27;);return `&lt;article class=&quot;tv-card&quot; lang=&quot;en&quot; aria-labelledby=&quot;transcript-viewer-4-${q.id}&quot;&gt;&lt;div class=&quot;tv-card-top&quot;&gt;&lt;span class=&quot;tv-question-number&quot;&gt;Q&amp;amp;A ${index+1}&lt;/span&gt;&lt;span&gt;${safe(q.name)}&lt;/span&gt;&lt;/div&gt;&lt;h3 class=&quot;tv-question&quot; id=&quot;transcript-viewer-4-${q.id}&quot;&gt;Question: ${marked(q.question,0,questionHits)}&lt;/h3&gt;&lt;div class=&quot;tv-answer-label&quot;&gt;Participant’s response&lt;/div&gt;&lt;p class=&quot;tv-answer&quot;&gt;${body}&lt;/p&gt;&lt;/article&gt;`;}).join(&#x27;&#x27;);}
+ function renderDetail(){const f=fragments.find(p=&gt;p.id===state.selected);detail.hidden=!f;if(!f){detail.innerHTML=&#x27;&#x27;;transcripts.after(detail);return;}const card=one(`#transcript-viewer-4-${f.question}`)?.closest(&#x27;.tv-card&#x27;);if(card)card.after(detail);detail.innerHTML=`&lt;div class=&quot;tv-selection-head&quot;&gt;&lt;span&gt;所选原话 · ${f.codes.length} 个关联编码&lt;/span&gt;&lt;button type=&quot;button&quot; class=&quot;tv-close cursor-interaction&quot; data-tv-close aria-label=&quot;关闭编码明细&quot;&gt;关闭 ×&lt;/button&gt;&lt;/div&gt;&lt;p&gt;“${safe(f.text)}”&lt;/p&gt;&lt;ul&gt;${f.codes.map(id=&gt;{const c=byId[id];return `&lt;li style=&quot;${style(c)}&quot;&gt;&lt;span class=&quot;tv-dot&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;span&gt;${id} · ${safe(c.name)}&lt;/span&gt;&lt;/li&gt;`;}).join(&#x27;&#x27;)}&lt;/ul&gt;${f.id===&#x27;s5&#x27;?&#x27;&lt;p&gt;同一处证据同时对应 E04 和 E06，原文只呈现一次。&lt;/p&gt;&#x27;:[&#x27;s8&#x27;,&#x27;s9&#x27;,&#x27;s10&#x27;].includes(f.id)?&#x27;&lt;p&gt;完整上下文：I removed some of the overly vague questions and reworded a few questions.&lt;/p&gt;&#x27;:&#x27;&#x27;}`;}
  function render(){const focused=root.contains(document.activeElement)?document.activeElement:null;const focusKey=focused?.dataset?.tvCode?[&#x27;data-tv-code&#x27;,focused.dataset.tvCode]:focused?.dataset?.tvFragment?[&#x27;data-tv-fragment&#x27;,focused.dataset.tvFragment]:null;root.dataset.tvMode=state.mode;input.value=state.query;all(&#x27;[data-tv-mode-button]&#x27;).forEach(b=&gt;b.setAttribute(&#x27;aria-pressed&#x27;,b.dataset.tvModeButton===state.mode));renderChips();renderTranscripts();renderDetail();const filterText=state.filter?`${state.filter} · ${fragments.filter(f=&gt;f.codes.includes(state.filter)).length} 处证据`:&#x27;2 段问答 · 9 个编码 · 12 处片段&#x27;;summary.textContent=state.query?`找到 ${matchCount} 处匹配 · ${state.filter||&#x27;全部编码&#x27;}`:filterText;one(&#x27;[data-tv-clear]&#x27;).textContent=state.filter?&#x27;清除编码筛选&#x27;:&#x27;全部编码&#x27;;if(focusKey)one(`[${focusKey[0]}=&quot;${focusKey[1]}&quot;]`)?.focus({preventScroll:true});}
  input.addEventListener(&#x27;input&#x27;,()=&gt;{state.query=input.value;render();save();});
  root.addEventListener(&#x27;click&#x27;,event=&gt;{const target=event.target.closest(&#x27;button&#x27;);if(!target||!root.contains(target))return;
